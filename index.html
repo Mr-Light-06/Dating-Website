@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Surprise ❤️</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+</head>
+</head>
+
+<body>
+
+    <main class="website">
+
+        <!-- OPENING SCREEN -->
+        <section class="opening-screen" id="opening-screen">
+
+            <div class="card">
+
+                <div class="emoji">
+                    ❤️
+                </div>
+
+                <h1 id="girl-name">
+                    Hey, Deekshya!
+                </h1>
+
+                <p class="question">
+                    Will you go on a date with me?
+                </p>
+
+                <div class="buttons">
+
+                    <button id="yes-btn">
+                        YES ❤️
+                    </button>
+
+                    <button id="no-btn">
+                        NO 🥹
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REACTION SCREEN -->
+        <section class="reaction-screen" id="reaction-screen">
+
+            <div class="card reaction-card">
+
+                <div class="main-emoji">
+                    🥹
+                </div>
+
+                <p class="small-text">
+                    Wait a second............
+                </p>
+
+                <h1>
+                    You said YES?!
+                </h1>
+
+                <p class="question">
+                    I was actually hoping<br>
+                    you would say that. ❤️
+                </p>
+
+                <button id="continue-btn"
+                        class="yes-button">
+                    Continue
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+     SCREEN 3 — DATE SELECTION
+     ========================= -->
+
+<section class="date-screen" id="date-screen">
+
+    <div class="date-card">
+
+        <div class="date-icon">📅</div>
+
+        <h2>Pick a date 💕</h2>
+
+        <p>When should we go on our little adventure?</p>
+
+        <div class="calendar-header">
+
+            <button id="previous-month" class="calendar-nav">
+                ‹
+            </button>
+
+            <div>
+                <h3 id="calendar-month">August</h3>
+                <span id="calendar-year">2026</span>
+            </div>
+
+            <button id="next-month" class="calendar-nav">
+                ›
+            </button>
+
+        </div>
+
+        <div class="calendar-weekdays">
+            <span>Sun</span>
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+        </div>
+
+        <div class="calendar-days" id="calendar-days">
+            <!-- JavaScript will generate the dates here -->
+        </div>
+
+        <div class="selected-date-container">
+            <p id="selected-date">
+                Please choose a date 💗
+            </p>
+        </div>
+
+        <button id="date-continue-btn" class="yes-button" disabled>
+            Continue 💕
+        </button>
+
+    </div>
+
+</section>
+
+<section class="time-screen" id="time-screen">
+
+    <div class="time-card">
+
+        <div class="time-icon">⏰</div>
+
+        <h2>Pick a time 💕</h2>
+        <p> What time should we meet for our little adventure?</p>
+        <div class="period-selector">
+            <button id="am-btn" class="period-btn active">AM</button>
+            <button id="pm-btn" class="period-btn">PM</button>
+        </div>
+        <div class="clock">
+            <div class="clock-face">
+                <button class="clock-number"
+                data-hour="12">12</button>
+                <button class="clock-number"
+                data-hour="1">1</button>
+                <button class="clock-number"
+                data-hour="2">2</button>
+                <button class="clock-number"
+                data-hour="3">3</button>
+                <button class="clock-number"
+                data-hour="4">4</button>
+                <button class="clock-number"
+                data-hour="5">5</button>
+                <button class="clock-number"
+                data-hour="6">6</button>
+                <button class="clock-number"
+                data-hour="7">7</button>
+                <button class="clock-number"
+                data-hour="8">8</button>
+                <button class="clock-number"
+                data-hour="9">9</button>
+                <button class="clock-number"
+                data-hour="10">10</button>
+                <button class="clock-number"
+                data-hour="11">11</button>
+                <div class="hour-hand"></div>
+                <div class="minute-hand"></div>
+                <div class="clock-center"></div>
+            </div>
+        </div>
+        <button id="reset-time-btn"
+        class="reset-time-btn">↻ Reset</button>
+        <div class="selected-time-container">
+            <p id="selected-time">
+                Please choose a time 💗
+            </p>
+        </div>
+        <button id="time-continue-btn"
+        class="yes-button" disabled>
+            Continue 💕
+        </button>
+    </div>
+</section>
+
+
+
+<section class="activity-screen" id="activity-screen">
+
+    <div class="activity-card">
+
+        <div class="activity-icon">✨</div>
+
+        <h2>What should we do? 💕</h2>
+
+        <p>Pick the vibe for our little adventure.</p>
+
+
+        <div class="activity-options">
+
+            <button class="activity-option" data-activity="Café Hopping">
+                <span class="activity-emoji">☕</span>
+                <span class="activity-name">Café Hopping</span>
+            </button>
+
+            <button class="activity-option" data-activity="Movie Time">
+                <span class="activity-emoji">🎬</span>
+                <span class="activity-name">Movie Time</span>
+            </button>
+
+            <button class="activity-option" data-activity="Food Hunt">
+                <span class="activity-emoji">🍕</span>
+                <span class="activity-name">Food Hunt</span>
+            </button>
+
+            <button class="activity-option" data-activity="Evening Walk">
+                <span class="activity-emoji">🌆</span>
+                <span class="activity-name">Evening Walk</span>
+            </button>
+
+            <button class="activity-option" data-activity="Game Zone">
+                <span class="activity-emoji">🎮</span>
+                <span class="activity-name">Game Zone</span>
+            </button>
+
+            <button class="activity-option" data-activity="Photo Adventure">
+                <span class="activity-emoji">📸</span>
+                <span class="activity-name">Photo Adventure</span>
+            </button>
+
+            <button class="activity-option" data-activity="Dessert Run">
+                <span class="activity-emoji">🍦</span>
+                <span class="activity-name">Dessert Run</span>
+            </button>
+
+            <button class="activity-option surprise-option" data-activity="Surprise Me">
+                <span class="activity-emoji">🎁</span>
+                <span class="activity-name">Surprise Me</span>
+            </button>
+
+        </div>
+
+
+        <!-- Selected activities -->
+
+        <div class="selected-activity-container">
+
+            <p id="selected-activity">
+                Please choose an activity 💗
+            </p>
+
+        </div>
+
+
+        <!-- Continue -->
+
+        <button
+            id="activity-continue-btn"
+            class="yes-button"
+            disabled
+        >
+            Continue 💕
+        </button>
+
+
+    </div>
+
+</section>
+
+
+<section class="confirmation-screen" id="confirmation-screen">
+
+    <div class="confirmation-card">
+
+        <div class="confirmation-icon">💌</div>
+
+        <h2>Our little plan 💕</h2>
+
+        <p class="confirmation-subtitle">
+            Here's what you've planned...
+        </p>
+
+        <div class="confirmation-details">
+
+            <div class="confirmation-item">
+
+                <span class="confirmation-label">
+                    📅 Date
+                </span>
+
+                <span id="confirmation-date">
+                </span>
+
+            </div>
+
+
+            <div class="confirmation-item">
+
+                <span class="confirmation-label">
+                    ⏰ Time
+                </span>
+
+                <span id="confirmation-time">
+                </span>
+
+            </div>
+
+
+            <div class="confirmation-item">
+
+                <span class="confirmation-label">
+                    ✨ Activities
+                </span>
+
+                <span id="confirmation-activities">
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Edit button -->
+
+        <button
+            id="edit-plan-btn"
+            class="edit-plan-btn"
+        >
+            ✏️ Edit my choices
+        </button>
+
+
+        <p class="confirmation-question">
+            Everything looks good? 💗
+        </p>
+
+
+        <!-- Continue button -->
+
+        <button
+            id="confirmation-continue-btn"
+            class="yes-button"
+        >
+            Looks perfect 💕
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<section class="agreement-screen" id="message-screen">
+
+    <div class="agreement-card">
+
+        <!-- Credit card / payment icon -->
+
+        <div class="agreement-icon">
+            💳
+        </div>
+
+
+        <h2>
+            one small fee
+        </h2>
+
+
+        <p class="agreement-description">
+            Thanks for actually making it this far 😂
+            <br><br>
+            Since you've successfully planned our
+            little adventure, there's just one tiny
+            thing left...
+        </p>
+
+
+        <!-- Fake payment box -->
+
+        <div class="fee-box">
+
+            <div class="fee-information">
+
+                <h3>
+                    Date Agreement™
+                </h3>
+
+                <p>
+                    one-time fee • non-refundable
+                    • absolutely worth it
+                </p>
+
+            </div>
+
+
+            <span class="fee-amount">
+                ₹499
+            </span>
+
+        </div>
+
+
+        <p class="tiny-warning">
+            No refunds. No negotiations.
+            I don't make the rules. 😌
+        </p>
+
+
+        <!-- Fake payment button -->
+
+        <button
+            id="fake-payment-btn"
+            class="agreement-pay-btn"
+        >
+            Pay ₹499 & Confirm ✨
+        </button>
+
+
+        <!-- Back button -->
+
+        <button
+            id="agreement-back-btn"
+            class="agreement-back-btn"
+        >
+            ← wait, I changed my mind
+        </button>
+
+    </div>
+
+</section>
+
+
+
+
+
+<section class="ticket-screen" id="ticket-screen">
+
+    <div class="ticket-card" id="ticket-card">
+
+        <div class="ticket-icon">
+            🎟️
+        </div>
+
+        <h2>OFFICIAL DATE TICKET</h2>
+
+        <div class="ticket-line"></div>
+
+
+        <div class="ticket-detail">
+
+            <span class="ticket-label">
+                Holder
+            </span>
+
+            <span class="ticket-value">
+                Deekshya 💕
+            </span>
+
+        </div>
+
+
+        <div class="ticket-detail">
+
+            <span class="ticket-label">
+                Date
+            </span>
+
+            <span
+                class="ticket-value"
+                id="ticket-date"
+            ></span>
+
+        </div>
+
+
+        <div class="ticket-detail">
+
+            <span class="ticket-label">
+                Time
+            </span>
+
+            <span
+                class="ticket-value"
+                id="ticket-time"
+            ></span>
+
+        </div>
+
+
+        <div class="ticket-detail">
+
+            <span class="ticket-label">
+                Mission
+            </span>
+
+            <span
+                class="ticket-value ticket-activities"
+                id="ticket-activities"
+            ></span>
+
+        </div>
+
+
+        <div class="ticket-line"></div>
+
+
+        <div class="ticket-status">
+
+            <span class="ticket-status-title">
+                STATUS
+            </span>
+
+            <span class="ticket-approved">
+                ✓ APPROVED
+            </span>
+
+        </div>
+
+
+        <p class="ticket-message">
+            This ticket is valid for
+            <strong>ONE unforgettable adventure.</strong>
+        </p>
+
+    </div>
+
+
+    <!-- Ticket buttons -->
+
+    <div class="ticket-actions">
+
+        <button
+            id="download-ticket-btn"
+            class="ticket-main-btn"
+        >
+            🎟️ Save My Ticket
+        </button>
+
+
+        <button
+            id="send-ticket-btn"
+            class="ticket-send-btn"
+        >
+            💌 Send My Ticket
+        </button>
+
+
+        <button
+            id="edit-ticket-btn"
+            class="ticket-edit-btn"
+        >
+            ✏️ Change My Choices
+        </button>
+
+    </div>
+
+</section>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
+
